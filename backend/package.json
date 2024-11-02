@@ -1,0 +1,32 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Sambhav hackathon backend",
+  "main": "src/server.ts",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "dev": "nodemon --watch src -e ts --exec ts-node src/server.ts",
+    "generate": "drizzle-kit generate",
+    "migrate": "drizzle-kit migrate"
+  },
+  "author": "Vaishnav Ghenge",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.12.2",
+    "@typescript-eslint/parser": "^8.12.2",
+    "drizzle-kit": "^0.27.1",
+    "eslint": "^9.14.0",
+    "nodemon": "^3.1.7",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^0.10.1",
+    "dotenv": "^16.4.5",
+    "drizzle-orm": "^0.36.0",
+    "express": "^4.21.1"
+  }
+}
