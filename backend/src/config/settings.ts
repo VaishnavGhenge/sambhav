@@ -2,6 +2,10 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
+if (!process.env.PORT) {
+  new Error("Missing .env file");
+}
+
 const settings = {
   root: {
     PORT: process.env.PORT || 8000,
