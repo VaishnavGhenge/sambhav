@@ -1,6 +1,8 @@
 import { IndianRupee } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
+import { Overview } from '@/components/dashboard/overview';
+import { RecentSales } from '@/components/dashboard/recent-sales';
 
 export default function Home() {
   return (
@@ -13,6 +15,7 @@ export default function Home() {
             <TabsList>
               <TabsTrigger value="overview">Overview</TabsTrigger>
               <TabsTrigger value="report">Reports</TabsTrigger>
+              <TabsTrigger value="product">Products</TabsTrigger>
             </TabsList>
             <TabsContent value="overview" className="mt-4">
               <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -78,6 +81,27 @@ export default function Home() {
                     <p className="text-xs text-muted-foreground">
                       Next sync in 6m 36s
                     </p>
+                  </CardContent>
+                </Card>
+              </div>
+              <div className='grid grid-cols-1 gap-4 mt-4 lg:grid-cols-7'>
+                <Card className='col-span-1 lg:col-span-4'>
+                  <CardHeader>
+                    <CardTitle>Overview</CardTitle>
+                  </CardHeader>
+                  <CardContent className='pl-2'>
+                    <Overview />
+                  </CardContent>
+                </Card>
+                <Card className='col-span-1 lg:col-span-3'>
+                  <CardHeader>
+                    <CardTitle>Recent Sales</CardTitle>
+                    <CardDescription>
+                      You made 23 From today.
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <RecentSales />
                   </CardContent>
                 </Card>
               </div>
