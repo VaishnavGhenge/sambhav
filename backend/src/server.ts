@@ -3,6 +3,7 @@ import http from "http";
 
 import settings from "./config/settings";
 import "./config/database.config";
+import "./config/shopify.config"
 
 const app = express();
 
